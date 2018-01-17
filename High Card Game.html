@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Extra Credit High Card Wins</title>
+	<meta charset="utf-8">
+	<!-- Card Game -->
+    <!-- 11/10/2017 -->
+ 
+	
+</head>
+<body>
+<script type="text/javascript">  
+    
+    var num = prompt("Provide a number between 1 and 10");
+    num = Number(num); //converts string into number 
+    alert("You have chosen the card " + num);
+    
+    var house = Math.floor((Math.random() * 10)+ 1);
+    //random generator from 1 to 10
+    alert("House's Card " + house);
+    if (num > house) {
+        alert("You Win! House Loses.");
+} 
+    else if (house > num){
+       alert("House Wins! You Lose.");
+    }
+    else {
+       alert("TIE!");
+}
+         
+	</script>
+	
+</body>
+</html>

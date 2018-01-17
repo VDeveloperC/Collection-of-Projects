@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+</head>
+<body>
+<script type="text/javascript">
+
+    var circle = new Object();     
+    var rad = Number(prompt("Please enter a Radius" , ""));
+    
+	circle.calc = calcCircl; 
+    
+function calcCircl()
+  {
+	 circl = (2*3.14) * rad ;
+	 alert("Circle = Radius:  " + rad + "  Circumference:  " + circl );
+	 document.write("The Circumference of the circle is: " + circl);
+  }   
+
+    circle.calc();
+    
+</script>
+</body>
+</html>

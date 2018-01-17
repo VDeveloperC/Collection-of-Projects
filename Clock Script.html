@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Assignment 5 </title>
+    
+     <!-- Assignment 5-->
+    <!-- 11/17/2017 -->
+    <!-- Christina Vines -->
+    <meta charset="utf-8">
+
+    
+    <script>
+        var seconds;
+        var minutes;
+        var hours;
+        
+        // Prompt to pick what type of time wanted
+        var time = prompt("Please enter (1) to select AM/PM or select (2) for 24-hour/Military time");
+        
+        // set variables to current time
+        function setTime(){            
+            var clock = new Date();
+           
+            hours = clock.getHours(); 
+            minutes = clock.getMinutes();
+            seconds = clock.getSeconds();         
+        }
+        // function to display time 
+        function displayTime(format){
+            var times;
+            var timetype;
+           
+            if (minutes < 10){
+                minutes = "0" + minutes;
+            }
+           
+            if (seconds < 10){
+                seconds = "0" + seconds;
+            }
+            // AM/PM 
+            if (format !== '2'){
+                timetype = "AM/PM";
+                times = (hours < 12) ? " A.M." : " P.M.";
+                hours = Number(hours);
+                // Convert from am/pm to military
+                if (hours > 12){
+                    hours = hours - 12;
+                }
+            }
+            // Military Time
+            else {
+                if (Number(hours) < 10){
+                    hours = "0" + hours;
+                }
+                timetype = "24-hour/Military Time";
+                times = "";
+            }
+            // Print the time
+            document.write( "The current time in " + timetype + " format is " + hours + ":" + minutes + ":" + seconds + times + "</ br>.");
+        }
+       
+        window.onload = function(){
+            setTime();
+            displayTime(time);
+        }
+    </script>
+</head>
+<body>
+
+
+
+</body>
+</html>

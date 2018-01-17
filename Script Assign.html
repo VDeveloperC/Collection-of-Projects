@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+</head>
+<body>
+<h1>JavaScript - Lab 5</h1>
+<h2>Comparisons</h2>
+First Name: <input type="text" id="fname" value="John">
+<button onclick="checkName()">Check Name</button>
+<p id="demo1">Display the result here.</p>
+<script>
+function checkName() {
+  var firstName = document.getElementById("fname").value;
+  var result = (firstName === "John") ? "Hello John!":"You're not John!";
+  document.getElementById("demo1").innerHTML = result;
+}
+</script>
+<h2>Conditions</h2>
+<p id="demo2">Display the result here.</p> 
+
+<script>
+var age = 25;
+if (age > 18) {
+    document.getElementById("demo2").innerHTML = "old enough";
+} else {
+    document.getElementById("demo2").innerHTML = "too young";
+}
+</script>
+<h2>Switch</h2>
+<input id="myInput" type="text" value="BMW">
+<button onclick="checkCar()">Check Car</button>
+<p id="demo3">Display the result here.</p> 
+<script>
+function checkCar() {
+  var text;
+  var favCar = document.getElementById("myInput").value;
+
+  switch(favCar) {
+    case "BMW":
+      text = "German car";
+      break;
+    case "Ford":
+      text = "American car";
+      break;
+    case "Peugeot":
+      text = "French car";
+      break;
+    default:
+      text = "Unknown car name";
+  }
+  document.getElementById("demo3").innerHTML = text;
+    }
+
+</script>
+<h2>for Loop</h2>
+<p id="demo4">Display the result here.</p> 
+<script>
+var text = "";
+var x;
+
+for (x = 1; x < 10; x = x + 2) {
+    text += x + "<br>";
+}
+
+document.getElementById("demo4").innerHTML = text;
+</script>
+
+</body>
+</html>

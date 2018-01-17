@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+var today = new Date();
+var fullyear = today.getFullYear();
+var FinalExam = new Date("December 6, " + fullyear);
+var diff = FinalExam.getTime() - today.getTime();
+var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+var str = "Only <u>" + days + "</u> days left 'till the final exam! ";
+document.write(str + "<br />");
+</script>
+</body>
+</html>

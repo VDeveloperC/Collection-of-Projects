@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Assignment 6-->
+    <!-- 11/29/2017 -->
+    <!-- Christina Vines -->
+<html>
+<head>
+	<title>Assignment 6 - Chapter 9</title>
+	<meta charset="utf-8">    
+</head>
+<body>
+	<button onclick="myFunction()">Click Me For Fortune</button>
+
+<p id="fortune"></p> 
+<script>
+function myFunction() {
+    
+    var fortune = new Array(10);//create an array
+fortune[0]="Be a rainbow in someone's cloud.";
+fortune[1]="It is during out darkest moments that we must focus to see the light.";
+fortune[2]="Change your thoughts and change your world.";
+fortune[3]="No act of kindness is ever wasted.";
+fortune[4]="What we think we become.";
+fortune[5]="Make it simple but significant.";
+fortune[6]="Enjoy the simple things.";
+fortune[7]="Success will always be yours.";
+fortune[8]="Always speak the truth.";
+fortune[9]="Mistakes are proof that you are trying."; 
+
+c=Math.round(Math.random()*9);//to get a random fortune everytime you click button
+
+    document.getElementById("fortune").innerHTML = (fortune[c]);
+}
+
+</script>
+</body>
+</html>

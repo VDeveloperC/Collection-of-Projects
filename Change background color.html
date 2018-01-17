@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>lab 9</title>
+</head>
+    <body>
+    <form id="Color">
+  <input type="radio" name="colors" id="gray">Gray</input>
+  <input type="radio" name="colors" id="red">Red</input>
+  <input type="radio" name="colors" id="teal">Teal</input>
+  <input type="radio" name="colors" id="gold">Gold</input>
+  <input type="radio" name="colors" id="yellow">Yellow</input>
+  <input type="radio" name="colors" id="green">Green</input>
+    </form>
+
+    <script>        document.getElementById("Color").addEventListener("change", e => document.body.style.background = e.target.id)
+    </script>
+
+</body>
+</html>

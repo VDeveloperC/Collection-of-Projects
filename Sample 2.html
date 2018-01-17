@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+</head>
+<body>
+<h1>JavaScript - Lab 4</h1>
+<h2>Arithmetic</h2>
+<p id="demo1">Display the remainder here.</p> 
+<p>is the remainder when 15 is divided by 9.</p>
+<script>
+    var x = 15;
+    var y = 9;
+    document.getElementById("demo1").innerHTML = x % y;
+</script>
+<h2>Assignment</h2>
+<p id="demo2">Display the result here.</p> 
+<p>is the result of adding 5 to the variable x.</p>
+<script>
+    var x = 10;
+    x += 5;
+    document.getElementById("demo2").innerHTML = x;
+</script>
+<h2>Escape Characters</h2>
+<p id="demo3">Display the result here.</p> 
+<script>
+    var y = "Hello World!";
+    document.getElementById("demo3").innerHTML = y;
+
+</script>
+<h2>Numbers</h2>
+<p id="demo4">Display the result here.</p> 
+is the value of z when the code has been corrected.
+<script>
+    var x = 5;
+    var y = "6";
+    var z = x + y;
+    document.getElementById("demo4").innerHTML = z;
+
+</script>
+    
+<script>
+
+var str = "@";
+    for (var row = 6; row > 0; row--){
+        for (var col = 0; col <row; col++){
+            document.write(str)
+        }
+        document.write("<br />");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head><title>Card Array for Final Project</title>
+</head>
+<body>
+    <input type="button" value="Click for New Game" onClick="window.location.reload()">
+<script type="text/javascript">
+
+   // Declare variables and constants
+   var BR = "<br />";            // HTML line break
+   var DECK_SIZE = 52;    // # of cards in deck
+
+   var index;                               // array index
+   var deckSubscript;                 // subscript for deck
+   var numPlayerCards1 = 0;      // # of cards player 1
+   var numPlayerCards2 = 0;      // # of cards player 2
+   // Welcome the user
+   document.write("Welcome to the game of War!" + BR);
+
+   // Create card deck array
+   var cardDeck =[
+     "2C", "3C", "4C", "5C", "6C", "7C", "8C", "9C", "10C","JC","QC","KC","AC", 
+       "2D", "3D", "4D", "5D", "6D", "7D", "8D", "9D", "10D","JD","QD","KD","AD",
+      "2H", "3H", "4H", "5H", "6H", "7H", "8H", "9H", "10H","JH","QH","KH","AH",
+       "2S", "3S", "4S", "5S", "6S", "7S", "8S", "9S", "10S","JS","QS","KS","AS"];
+    switch (cardDeck){
+        case 1: 
+            Number(2)="2C","2D","2H","2S";
+        case 2:
+            Number(3)="3C","3D","3H","3S";
+        case 3:
+            Number(4)="4C","4D","4H","4S";
+        case 4:
+            Number(5)="5C","5D","5H","5S";
+        case 5:
+            Number(6)="6C","6D","6H","6S";
+        case 6:
+            Number(7)="7C","7D","7H","7S";
+        case 7:
+            Number(8)="8C","8D","8H","8S";
+        case 8:
+            Number(9)="9C","9D","9H","9S";
+        case 9:
+            Number(10)="10C","10D","10H","10S";
+        case 10:
+            Number(11)="JC","JD","JH","JS";
+        case 11: 
+            Number(12)="QC","QD","QH","QS";
+        case 12:
+            Number(13)="KC","KD","KH","KS";
+        case 13:
+            Number(14)="AC","AD","AH","AS";
+       
+            }
+
+   // Create a parallel array to track assigned cards
+   // Initialize values to false
+   var cardAssigned = new Array(DECK_SIZE);
+   for (index = 0; index < DECK_SIZE; index++) {
+      cardAssigned[index] = false;
+   }
+ 
+   // Create array of cards for each player's hand
+   // Declare indexes for current card being played and highest index
+   var playerDeck1 = new Array(DECK_SIZE / 2);
+   var playerDeck2 = new Array(DECK_SIZE / 2);
+   var playerIndex1 = 0;
+   var playerIndex2 = 0;
+
+   // Initialize player decks
+   for (index = 0; index < (DECK_SIZE / 2); index++) {
+      // Choose random card until an unassigned one is found
+      do {
+         deckSubscript = Math.floor(Math.random() * DECK_SIZE);
+      }
+      while (cardAssigned[deckSubscript]);
+
+      // Deal card to player 1, mark as assigned
+      playerDeck1[index] = cardDeck[deckSubscript];
+      //the doc.write statement is added just to show what's going on
+      document.write("Player 1: " + this.playerDeck1 + BR);
+      numPlayerCards1++;
+      cardAssigned[deckSubscript] = true;
+
+      // Choose random card until an unassigned one is found
+      do {
+         deckSubscript = Math.floor(Math.random() * DECK_SIZE);
+      }
+      while (cardAssigned[deckSubscript]);
+
+      // Deal card to player 2, mark as assigned
+      playerDeck2[index] = cardDeck[deckSubscript];
+      //the doc.write statement is added just to show what's going on
+      document.write("Player 2: " + this.playerDeck2 + BR);
+      numPlayerCards2++;
+      cardAssigned[deckSubscript] = true;
+   }
+    var cardname1, cardname2;
+    var points1, points2;
+    var numplays = 0;
+    var p1points = 0;
+    var p2points = 0;
+   
+    
+    while (numplays < (DECK_SIZE/2)) {
+        numplays++;
+        cardname1 = playerDeck1[playerIndex1++];
+        cardname2 = playerDeck2[playerIndex2++];
+        
+        
+        cardpoint1 = getPoints(cardname1);
+        cardpoint2 = getPoints(cardname2);
+        
+        if (playerDeck1 > playerDeck2){
+            alert( "House wins hand." + BR);
+           
+        }
+        else if (playerDeck2 > playerDeck1) {
+            alert("Player wins hand." + BR);
+         
+        }
+        else {
+            alert("Tie Hand." + BR);
+        }
+    
+    }
+   // Thank the user
+   document.write("All the cards have been dealt" + BR);
+
+</script>
+</body>
+</html>

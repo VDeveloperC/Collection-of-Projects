@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- Lab Assignment 6 -->
+<!-- Christina Vines -->
+</head>
+<body>
+<h1>JavaScript - Lab 6</h1>
+<h2>Functions</h2>
+<p id="demo1">Display the result here.</p>
+<script>
+    function myFunction() {
+    
+    document.getElementById("demo1").innerHTML = "Hello World!";
+}
+    myFunction();
+
+
+</script>
+
+<h2>Objects</h2>
+<p id="demo2">Display the result here.</p> 
+
+<script>
+    var person = {name:"John", age: 50};
+        document.getElementById("demo2").innerHTML = 
+    person.name + " is " + person.age + " years old.";
+</script>
+
+<h2>Events</h2>
+<button onclick="myFunction()">Click Me</button>
+
+<p id="demo3">Display the result here.</p> 
+<script>
+function myFunction() {
+    document.getElementById("demo3").innerHTML = "Hello World";
+}
+
+</script>
+  <script>
+          function sum(a, b) {
+          return a - b;
+          return a + b;
+          }
+          alert(sum(2, 3));   
+      </script>
+</body>
+</html>

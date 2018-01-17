@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+ <!-- Assignment 4 - Chapter 6-->
+    <!-- 10/20/2017 -->
+    <!-- Christina Vines -->
+<html>
+    <head>
+	<title>Assignment</title>
+	<meta charset="utf-8">	
+        <style>
+        table, tr, td, th  
+        {border: 1px solid black;
+        border-collapse: collapse;}
+    th  {text-align: left;                                             
+        background-color; white;}
+    th,td   {padding: 5px;}
+        </style>
+	</head>
+    <body>
+    
+        <h2>Script 1</h2>
+         <big>
+    <script type="text/javascript">
+       var f = Number(20);
+        document.write("<table border= \"1\">"); //table
+        document.write("<tr><td>Fahrenheit</td><td>Celsius</td></tr>");//titles
+        
+        while(f >= 20 && f<= 120) //creates the conversion table with formula
+            {
+                c = ((f-32)/1.8);
+                {
+                    document.write("<tr><td>" + f +"</td><td>" + c + "</td></tr>\n");            
+                }
+                f = (f + 5);// does the 
+            }
+        document.write("</table>");//output of table
+    </script>
+        </big>        
+                
+        <h2>Script 2</h2>
+        <big>
+        <script type="text/javascript">
+            var name ="Netscape";//answer
+            while (rname !== "Netscape")
+                {
+                    var rname= prompt("What is the name of the company that developed Javascript?");//prompt  and question
+                    if (rname !== name)
+                        {
+                            alert("That is wrong please try again. Hint first letter is Uppercased");//for when its wrong
+                        }
+                    else if (rname == name)
+                        {
+                            alert("Thats right! It is Netscape!");//for when the answer is right
+                        }
+                }
+            document.write("Correct it is Netscape\n");//prints out the coreect answer once you answer it correctly.
+        </script> 
+        </big>
+
+       
+     
+          
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+ 
+    <!-- 10/13/2017 -->
+ 
+<html>
+    <head>
+	<title>Assignment 3</title>
+	<meta charset="utf-8">	
+	</head>
+    <body>
+    
+        <h2>Script 1</h2>
+         <big>
+    <script type="text/javascript">
+        var answer = prompt("How old are you? ", "");//input
+        answer = Number(answer); // converts string into number
+        if (answer > 12 && answer < 20) {
+        alert("Teenagers rock!");
+        }
+        document.write( answer + " is a type of " + typeof(answer), "<br />"); //displays output and type of as number
+     </script>
+        </big>        
+                
+        <h2>Script 2</h2>
+        <big>
+        <script type="text/javascript">
+        var temp = prompt("Enter the Temperature in Fahrenheit","");     //input
+        var c = (temp -32)*(5/9);//converts fahrenheit to celsius
+            var result = parseFloat(c.toFixed(2)); //use parsefloat to convert to floating point number       
+            document.write( result + " is the temperature in Celsius", "<br />" ); //output       
+        </script> 
+        </big>
+        <h2>Script 3</h2>
+        <script type="text/javascript">
+        var us = 65; // US dollars
+        var baht = 65*33.07;//conversion to thai baht
+            document.write(" The " + us +" U.S dollars equals "+ baht + " Thai baht", "<br />" );//output
+        </script>
+            <br />
+            <h5>Thai Flag</h5>
+        
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/255px-Flag_of_Thailand.svg.png"
+            height="30%" width="30%">
+    </body>
+</html>

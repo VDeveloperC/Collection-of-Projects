@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 2- Javascript</title>
+	<meta charset="utf-8">
+	
+	<script>
+        //Script 1 input
+		var number = prompt ("Enter a number");
+            //Converts to number
+                 number = Number(number);
+        
+        var string = prompt("Enter a stirng");
+        
+        var bool = prompt(" Enter true or false");
+        var regexFalse = /^[fF][aA][lL][sS][eE]$/; 
+        //Converts to boolean
+        if (bool.match(regexFalse)){
+			bool = false;
+		}
+		else {
+			bool = true;
+		}    
+        
+    </script>
+    
+    <script>
+        //scripts 2 input
+		// Declare the  variables
+		var name = "Christina";
+		var zero = 0;
+		var noValue;
+		var emptyStr = "";
+	</script>
+    
+    <script>
+        //script 3 input
+        var v = parseInt(234);
+        var w = parseFloat(234);
+        var x = (234).toString(8);
+        var y = (234).toString(16);
+        var z = (234).toExponential();
+    </script>
+</head>
+<body>
+    <h2>Script 1</h2>
+    <big>
+        <script>
+            //Output
+           document.write( number + " is of type of " + typeof(number), "<br />"); //Number
+            document.write(string + " is of type of " + typeof(string) + "<br />") //String
+            document.write(bool + " is of type of " + typeof(bool),"<br />"); //Boolean
+            document.write('<p>She cried, "Aren\'t you going to help me?"</p>'); // Extra String
+        </script>
+    </big>
+    <h2>Script 2</h2>
+     <script>
+         //Output
+        document.write(v, "<br />"); //Integer
+        document.write(w, "<br />"); //Floating Point Number
+        document.write(x, "<br />"); //Octal number
+        document.write(y, "<br />"); //Hexadecimal Number
+        document.write(z, "<br />"); // Number in Scientific Notation
+        
+    </script>
+	
+    <h2>Script 3</h2>
+    <script>	
+        //Output
+		document.write(name + " = " + typeof(name) + "<br />"); //Name
+		document.write(zero + " = " + typeof(zero) + "<br />"); // Value of 0        
+		document.write( noValue + " = " + typeof(noValue) + "<br />"); // No value
+		document.write("( " + emptyStr + " ) = " + typeof(emptyStr) + "<br />"); //Empty String
+	</script>
+	
+</body>
+</html>
